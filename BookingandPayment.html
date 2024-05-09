@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,3 +55,61 @@
     </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Options</title>
+    <link rel="stylesheet" href="BookingandPayment.css">
+</head>
+<body>
+    <div class="payment-container">
+        <h2>Total Amount: <span id="total-amount"></span></h2>
+
+        <div class="payment-option">
+            <label for="gpay"><img src="gpay_logo.png" alt="Google Pay Logo"> Google Pay</label>
+            <input type="radio" id="gpay" name="payment-method" value="gpay">
+        </div>
+
+        <div class="payment-option">
+            <label for="phonepe"><img src="phonepe_logo.png" alt="PhonePe Logo"> PhonePe</label>
+            <input type="radio" id="phonepe" name="payment-method" value="phonepe">
+        </div>
+
+        <div class="payment-done-button" id="paymentDoneButton"></div>
+
+        <div class="booking-id" id="bookingId"></div>
+
+        <div class="exit-button" id="exitButton"></div>
+    </div>
+
+    <script>
+        var totalAmount = Math.floor(Math.random() * (3000 - 700 + 1)) + 700;
+        document.getElementById('total-amount').innerText = '$' + totalAmount.toFixed(2);
+
+        function generateBookingId() {
+            return Math.floor(Math.random() * 1000000);
+        }
+
+        function handlePaymentDone() {
+            var bookingId = generateBookingId();
+            document.getElementById('bookingId').innerText = 'Booking ID: ' + bookingId;
+
+            var exitButton = document.createElement('button');
+            exitButton.textContent = 'Exit';
+            exitButton.onclick = function() {
+                window.location.href = 'LoginSignUp.html'; // Redirect to LoginSignUp.html page
+            };
+            document.getElementById('exitButton').appendChild(exitButton);
+        }
+
+        var paymentDoneButton = document.createElement('button');
+        paymentDoneButton.textContent = 'Payment Done';
+        paymentDoneButton.onclick = handlePaymentDone;
+        document.getElementById('paymentDoneButton').appendChild(paymentDoneButton);
+    </script>
+</body>
+</html>
+>>>>>>> origin/main

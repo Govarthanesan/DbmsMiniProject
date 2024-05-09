@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -60,3 +61,67 @@ button:hover {
     text-align: center;
     font-weight: bold;
 }
+=======
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #803D3B;
+}
+.container {
+    width: 300px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color:#E4C59E;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-bottom: 5px;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="price"],
+button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="price"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+button {
+    background-color: #322C2B;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color:brown;
+    color: #fff;
+}
+#bookingId {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+>>>>>>> origin/main
